@@ -1,0 +1,631 @@
+* ,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+:root{
+    --main-color:#cf1b15;
+    --text-white:white;
+    --text-white-hover:rgba(255, 255, 255, 0.8);
+    --bg-grey:#F8F8F8;
+    --second-red:#CF1B15;
+}
+.container{
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+/* elevator  */
+.elevator{
+    width: 50px;
+    height: 50px;
+    background-color: #b51917;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    color: white;
+    opacity: 0.7;
+    font-size: 11px;
+    border-radius: 2px;
+    border: 1px solid rgba(99, 99, 99, 0.2);
+    transition: 0.3s;
+
+}
+.elevator:hover{
+    background-color: white;
+    color: #b51917;
+}
+/* triangle */
+.our-story-inner::after , 
+.our-bottom::after , .who-we-are-box::after ,
+#gift::after  {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: white;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50% , 0);
+    z-index: 50;
+}
+.our-story-inner , .our-bottom , .who-we-are-box , #gift{
+    position: relative;
+}
+.our-bottom::after{
+    border-top-color: var(--bg-grey);
+}
+#gift::after{
+    border-top-color: #D6D6D6;
+}
+.text-white{
+    color: white;
+}
+.text-black{
+    color: black;
+}
+.red{
+    color: var(--second-red);
+}
+.second-font{
+    font-family: 'Dancing Script', cursive;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 18px;
+    line-height: 1.8em;
+}
+ul,li{
+    list-style: none;
+}
+.heart-with-line{
+    max-width: 400px;
+    height: 1px;
+    background-color: rgb(190, 190, 190);
+    margin: 50px auto;
+    position: relative;
+}
+.heart-with-line i{
+    color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 5px 9px;
+    background-color: white;
+    font-size: 13px;
+}
+.heart-with-line i.grey{
+    background: var(--bg-grey);
+}
+.heart-trans{
+        background: linear-gradient(
+    to right,
+    black 45%,
+    transparent 45%,
+    transparent 55%,
+    black 55%) ;
+}
+.heart-trans i {
+    background-color: transparent;
+}
+#rsvp .heart-with-line{
+    background: linear-gradient(
+    to right,
+    white 45%,
+    transparent 45%,
+    transparent 55%,
+    white 55%) ;
+}
+#rsvp .heart-with-line i {
+    background-color: transparent;
+    color: white;
+}
+/* header */
+#header{
+    min-height: 800px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)) , url(../images/set1-happy-couple-1500x630.jpg) no-repeat center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/* logo */
+.nav .logo{
+    width: 230px;
+    display: flex;
+}
+.nav .logo a img{
+    width: 100%;
+    display: flex;
+}
+/* menu */
+.nav .menu{
+    display: flex;
+}
+.nav .menu li a {
+    padding: 20px 0;
+    display: block;
+    font-size: 13px;
+    color: var(--text-white);
+}
+.nav .menu li a span {
+    border-left: 1px solid var(--text-white);
+    padding: 0 15px;
+}
+.nav .menu li:first-child span{
+    border-left: none;
+}
+.nav .menu a:hover span{
+    color: var(--text-white-hover);
+    border-left-color: var(--text-white-hover);
+}
+.menu-toggler{
+    display: none;
+}
+/* header content section */
+.header-section{
+    text-align: center;
+}
+.header-section h1 {
+    margin-bottom: 50px;
+    font-size: 90px;
+    word-spacing: 30px;
+}
+/* our story */
+#our-story-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.our-story-inner{
+    text-align: center;
+    padding: 120px 10px;
+
+}
+.our-story-inner h2{
+    font-size: 50px;
+}
+.our-story-inner p {
+    font-size: 18px;
+    line-height: 1.8em;
+    margin: 50px 0;
+}
+.our-story-inner time {
+    font-size: 30px;
+    color: var(--main-color);
+}
+/* our story bottom */
+.our-bottom{
+    width: 100%;
+    background-color: var(--bg-grey);
+    text-align: center;
+    padding: 120px 0;
+}
+.our-bottom h2{
+    font-size: 50px;
+}
+.our-story-description{
+    display: flex;
+    justify-content: space-between;
+}
+.our-story-description p{
+    text-align: justify;
+    width: 48%;
+}
+/* who we are */
+#who-we-are {
+    width: 100%;
+}
+.who-we-are , #wedding-banner ,
+.accomodations-banner{
+    width: 100%;
+    background:linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)) ,  url(../images/set1-young-couple-bw.jpg) no-repeat center 60% fixed;
+    background-size: cover;
+    padding: 100px 15px;
+    text-align: center;
+    color: white;
+}
+.who-we-are h2 , #wedding-banner h2 , .accomodations-banner h2{
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+/* who we are box */
+.who-we-are-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 0;
+}
+.who-we-are-box-inner{
+    width: 47%;
+}
+.who-we-are-box-inner h3 {
+    font-size: 60px;
+    text-align: center;
+}
+.who-we-are-box-img{
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.who-we-are-box-img img{
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+.who-we-are-box-img:hover img{
+    transform: scale(1.1);
+}
+.who-we-are-box-inner figcaption{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+.who-we-are-box-inner p {
+    text-align: center;
+}
+/* gusts */
+.gust{
+    width: 100%;
+    display: flex;
+    min-height: 400px;
+}
+.gust-side{
+    width: 50%;
+    padding: 13px 40px;
+}
+.gust-side-left{
+    background-color: #F8F8F8;
+}
+.gust-side-right{
+    background-color: #F9F2F2;
+}
+.gust-side h2{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.gust-side-section{
+    display: flex;
+    justify-content: space-between;
+}
+.gust-picture{
+    width: 28%;
+}
+.gust-picture figure div{
+    width: 100%;
+}
+.gust-picture figure div img{
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+.gust-picture figure figcaption {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 20px;
+}
+/* wedding banner */
+#wedding-banner {
+    background:linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)) ,  url(../images/wedding-colorful-light-balls-bw.jpg) no-repeat center 60% fixed;
+    background-size: cover;
+}
+/* wedding inner */
+.wedding-inner{
+    padding: 90px 0;
+}
+.wedding-inner h3{
+    font-size: 32px;
+    font-weight: normal;
+}
+.wedding-p{
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+    text-align: center;
+}
+.wedding-inner .who-we-are-box-img{
+    margin-top: 5px;
+}
+.wedding-inner-box{
+    margin-top: 0 !important;
+}
+figcaption .wedding-p{
+    font-size: 16px;
+}
+/* accomodations-banner */
+.accomodations-banner{
+    background:linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)) ,  url(../images/accomodation.jpg) no-repeat center 60% fixed;
+    background-size: cover;
+}
+/* accomodation boxes */
+.accomodations-box{
+    padding: 90px 5px;
+}
+.accomodation-wrapper{
+    padding: 0;
+}
+.accomodation-inner{
+    width: 30%;
+}
+.accomodation-img{
+    position: relative;
+    cursor: pointer;
+}
+.accomodation-inner .share{
+    background-color: hsla(2, 82%, 45%, 0.8);
+    width: 70px;
+    height: 70px;
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) rotate(-45deg) scale(-0.8);
+    transition: 0.7s ;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(.56,-1,.2,2);
+}
+.accomodation-img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: block;
+    opacity: 0;
+    transition: 0.7s;
+}
+.accomodation-img:hover::after{
+    opacity: 1;
+}
+.accomodation-img:hover .share{
+    opacity: 1;
+    z-index: 50;
+    transform: translate(-50% , -50%) rotate(0) scale(1);
+}
+/* gift */
+#gift{
+    width: 100%;
+    background: url(../images/gift.jpg) no-repeat center top;
+    background-size: cover;
+    padding: 120px 0;
+}
+#gift h2{
+    font-size: 60px;
+    text-align: center;
+}
+#gift .who-we-are-box::after{
+    display: none;
+}
+#gift .accomodation-wrapper{
+    padding-top: 40px;
+}
+#gift p {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+/* rsvp */
+#rsvp{
+    background: linear-gradient(rgba(0, 0, 0, 0.6) , rgba(0, 0, 0, 0.6)) , url("../images/set1-young-couple.jpg") no-repeat center top fixed;
+    background-size: cover;
+    padding: 120px 0;
+    min-height: 800px;
+}
+.contact-us {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 50px;
+    width: 700px;
+    margin: 0 auto;
+}
+.contact-us h2 {
+    font-size: 60px;
+    color: white;
+}
+.contact-us p{
+    color: white;
+    font-size: 18px;
+    line-height: 1.8em;
+}
+/* contact us inputs */
+.contact-us-input{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.contact-us-input-box{
+    width: 48%;
+    color: white;
+    margin-bottom: 30px;
+}
+.contact-us-input .contact-us-input-box label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-us-input .contact-us-input-box input{
+    background-color: transparent;
+    border: 2px solid white;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.contact-us-input .contact-us-input-box select{
+    width: 100%;
+    background-color: transparent;
+    height: 40px;
+    border: 2px solid white;
+    outline: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.contact-us-input .contact-us-input-box select option{
+    color: black;
+}
+.button-row{
+    width: 100%;
+}
+.button-row .button{
+    padding: 15px 60px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+.button:hover {
+    background-color: #cf514f;
+}
+#footer{
+    width: 100%;
+    background-color: #B51917;
+    padding: 15px 10px;
+}
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-inner p {
+    font-size: 12px;
+    color: white;
+}
+.footer-inner ul{
+    display: flex;
+}
+.footer-inner ul li:first-child{
+    margin-left: none;
+}
+.footer-inner ul li {
+    margin-left: 30px;
+}
+.footer-inner ul li a {
+    color: white;
+    font-size: 12px;
+}
+.footer-inner ul li a:hover{
+    text-decoration: underline;
+}
+/* for tablet */
+@media (max-width:989px){
+   /* menu */
+    .nav{
+    background-color: var(--main-color);
+   } 
+   .nav .menu{
+    display: none;
+   }
+   .menu-toggler{
+    display: block;
+    color: var(--text-white);
+    font-size: 20px;
+    cursor: pointer;
+   }
+   .menu-toggler:hover{
+    color: var(--text-white-hover);
+   }
+   /* header content section */
+   #header{
+    min-height: 400px;
+   }
+   .header-section h1 {
+    margin-bottom: 1px;
+    font-size: 56px;
+    word-spacing: 20px;
+   }
+
+}
+/* smart ohones */
+@media (max-width:767px){
+.our-story-description{
+    flex-wrap: wrap;
+}
+.our-story-description p{
+    width: 100%;
+}
+.our-story-description p:first-child{
+    margin-bottom: 20px;
+}
+/* who we are bottom sections */
+.who-we-are-box-inner{
+    width: 100%;
+}
+.who-we-are-box{
+    flex-wrap: wrap;
+}
+.who-we-are-box-inner h3{
+    padding-top: 20px;
+}
+/* gusts */
+.gust{
+    flex-direction: column;
+}
+.gust-side{
+    width: 100%;
+}
+.gust-side-section{
+    flex-direction: column;
+}
+.gust-picture {
+    width: 100%;
+}
+.gust-side figure{
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+/* rsvp */
+.contact-us-input-box {
+    width: 100%;
+}
+.contact-us{
+    max-width: 80%;
+}
+.footer-inner{
+    flex-direction: column;
+}
+}
